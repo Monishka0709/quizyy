@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+.quizlist--container{ 
+     height: 100vh;
+     overflow: auto;
+     scrollbar-width: none;
+     background-image: url("./assets/quizListBackground.png"); 
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center;
+     
+
+
+}
+
+/* h1{
+    background-color: #4f0687e9;
+    color: white;
+} */
+
+.quizmenu--container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    overflow: auto;
+    scrollbar-width: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 1rem 1rem 3rem;
+    gap: 1rem;
+}
+.quizmenu--container > div:nth-child(1) {
+    background-image: url("./assets/java.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.quizmenu--container > div:nth-child(2) {
+    background-image: url("./assets/pythonlogo.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.quizmenu--item {
+    
+    background-color: aliceblue;
+    object-fit: cover;
+    border-radius: 5px;
+    height:20rem;
+    width:16rem;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 7px 24px;
+    font-size: 1.5rem;
+    transition: background-color 500ms ease-in-out;
+    transition: color 100ms;
+}
+
+
+.quizmenu--item:hover {
+    background-image: none !important;
+    background-color: #4f0687e9 ;
+    color: azure;
+    
+    
+}
+
+@media screen and (max-width: 1200px) {
+    .quizmenu--container { 
+        grid-template-columns: auto auto auto;
+    }}
+
+
+@media screen and (max-width: 900px) {
+    .quizmenu--container { 
+            grid-template-columns: auto auto;
+    }}
+
+    @media screen and (max-width: 500px) {
+        .quizmenu--container { 
+                grid-template-columns: auto;
+                margin: auto;
+        }}
